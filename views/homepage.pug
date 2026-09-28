@@ -1,0 +1,26 @@
+doctype html
+html
+    head
+        title= title
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        .container
+            h1 Samples Custom Object Records
+            p
+                a(href="/update-cobj") Add to this table
+            if data && data.length
+                table.records-table
+                    thead
+                        tr
+                            th Name
+                            th Status
+                            th Location
+                    tbody
+                        each record in data
+                            tr
+                                td= record.properties.name || ''
+                                td= record.properties.sample_status || ''
+                                td= record.properties.location || ''
+            else
+                p No sample records found.

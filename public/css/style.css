@@ -4,36 +4,57 @@ body, * {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.5rem;
 }
 
 h1 {
-    margin: 1rem;
+    margin: 1rem 0;
 }
 
-.cards {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+p {
+    margin: 0.75rem 0 1.25rem;
 }
 
-.card {
-    flex-basis: 31%;
-    margin: 1rem 0.4rem;
-    padding: 1rem 0.4rem 2.5rem 0.4rem;
-    border: solid 1px lightgrey;
-    border-radius: 15px;
+a {
+    color: #ff7a59;
+    font-weight: 600;
+}
+
+.records-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
     box-shadow: 3px 2px 6px lightgrey;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.card__email {
-    font-size: 1rem;
+.records-table th,
+.records-table td {
+    border: solid 1px #e0e0e0;
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+.records-table thead {
+    background-color: #2d3e50;
+    color: #fff;
+}
+
+.records-table tbody tr:nth-child(even) {
+    background-color: #f7f7f7;
 }
 
 .form-wrapper {
     font-size: 18px;
     max-width: 768px;
-    margin: 2rem auto;
+    margin: 2rem 0;
     padding: 2rem;
     border: solid 1px lightgrey;
     border-radius: 15px;
@@ -48,11 +69,21 @@ label, input {
 
 input[type="text"] {
     padding: .25rem;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 0.75rem;
 }
 
 input[type="submit"] {
-    background-color: lightgrey;
+    background-color: #ff7a59;
+    color: #fff;
     border: none;
-    padding: .375rem 1rem;
+    border-radius: 4px;
+    padding: .5rem 1.25rem;
     margin-top: 10px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #e66a4a;
 }
